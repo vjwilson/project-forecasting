@@ -5,31 +5,44 @@ import './App.css';
 class LambdaDemo extends Component {
   constructor(props) {
     super(props);
-    this.state = { loading: false, msg: null };
+    this.state = { loading: false, list: null };
   }
 
-  handleClick = api => e => {
+  listConsultants = api => e => {
     e.preventDefault();
 
     this.setState({ loading: true });
     fetch('/.netlify/functions/' + api)
       .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }));
-  };
+      .then(json => {
+        const list = json.msg.map(person => (
+          <li
+            class="consultant-list-item"
+            key={person.email}
+          >
+            <span>{person.firstName} {person.lastName}</span>
+            <span>
+              {person.title}
+              {person.specialty && <span>, {person.specialty}</span>}
+            </span>
+          </li>
+        ));
+
+        this.setState({ loading: false, list })
+      });
+
+  }
 
   render() {
-    const { loading, msg } = this.state;
+    const { loading, list } = this.state;
 
     return (
       <p>
-        <button onClick={this.handleClick('hello')}>
-          {loading ? 'Loading...' : 'Call Lambda'}
-        </button>
-        <button onClick={this.handleClick('async-chuck-norris')}>
-          {loading ? 'Loading...' : 'Call Async Lambda'}
+        <button onClick={this.listConsultants('consultants')}>
+          {loading ? 'Loading...' : 'Get Consultants'}
         </button>
         <br />
-        <span>{msg}</span>
+        <ul class="consultant-list">{list}</ul>
       </p>
     );
   }
