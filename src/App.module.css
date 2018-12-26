@@ -1,11 +1,10 @@
-.App {
+.app {
   background-color: #f1f1f1;
   min-height: 100vh;
-  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.app-main {
+  padding: 12px;
 }
 
 .consultant-list {

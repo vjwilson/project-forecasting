@@ -6,10 +6,15 @@ import Login from '../Login/Login';
 
 class AppHeader extends Component {
   render() {
+    const { role } = this.props;
+
     return (
       <header className={styles['app-header']}>
         <h1>Resouce Allocation</h1>
-        <Login />
+        <Login
+          login={this.props.login}
+          role={role}
+        />
       </header>
     );
   }

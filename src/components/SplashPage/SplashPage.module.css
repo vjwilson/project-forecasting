@@ -1,6 +1,9 @@
 .login {
   align-items: center;
   display:  flex;
+}
+
+.login-block {
   margin: -12px;
 }
 

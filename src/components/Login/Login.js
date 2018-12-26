@@ -3,22 +3,8 @@ import React, { Component } from 'react';
 import styles from './Login.module.css';
 
 class Login extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      role: '',
-    };
-  }
-
-  login(role) {
-    this.setState({
-      role,
-    });
-  }
-
   render() {
-    const { role } = this.state;
+    const { role } = this.props;
 
     return (
       <div className={styles['login']}>
@@ -26,13 +12,13 @@ class Login extends Component {
           <div className={styles['login-block']}>
             <button
               className={styles['login-btn']}
-              onClick={() => {this.login('Team Lead')}}
+              onClick={() => {this.props.login('Team Lead')}}
             >
               Login as Team Lead
             </button>
             <button
               className={styles['login-btn']}
-              onClick={() => {this.login('Practice Manager')}}
+              onClick={() => {this.props.login('Practice Manager')}}
             >
               Login as Practice Manager
             </button>
@@ -43,7 +29,7 @@ class Login extends Component {
             <span>Logged in as {role}</span>
             <button
               className={styles['login-btn']}
-              onClick={() => {this.login('')}}
+              onClick={() => {this.props.login('')}}
             >
               Logout
             </button>

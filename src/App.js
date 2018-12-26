@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
-import './App.css';
+import styles from './App.module.css';
 
 import AppHeader from './components/AppHeader/AppHeader';
+import SplashPage from './components/SplashPage/SplashPage';
+import Dashboard from './components/Dashboard/Dashboard';
 
 class LambdaDemo extends Component {
   constructor(props) {
     super(props);
-    this.state = { loading: false, list: null };
+    this.state = {
+      list: null,
+      loading: false,
+      page: 'splash',
+    };
   }
 
   listConsultants = api => e => {
@@ -18,7 +24,7 @@ class LambdaDemo extends Component {
       .then(json => {
         const list = json.msg.map(person => (
           <li
-            className="consultant-list-item"
+            className={styles['consultant-list-item']}
             key={person.email}
           >
             <span>{person.firstName} {person.lastName}</span>
@@ -43,18 +49,54 @@ class LambdaDemo extends Component {
           {loading ? 'Loading...' : 'Get Consultants'}
         </button>
         <br />
-        <ul className="consultant-list">{list}</ul>
+        <ul className={styles['consultant-list']}>{list}</ul>
       </div>
     );
   }
 }
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      page: 'splash',
+      user: '',
+    };
+
+    this.loginAs = this.loginAs.bind(this);
+  }
+
+  loginAs(role) {
+    const page = (role)
+      ? 'dashboard'
+      : 'splash';
+
+    this.setState({
+      page,
+      role,
+    });
+  }
+
   render() {
+    const { page, role } = this.state;
+
     return (
-      <div className="App">
-        <AppHeader />
+      <div className={styles['app']}>
+        <AppHeader
+          login={this.loginAs}
+          role={role}
+        />
+        <main className={styles['app-main']}>
+          { page === 'splash' && (
+            <SplashPage />
+          )}
+          { page !== 'splash' && (
+            <Dashboard
+              role={role}
+            />
+          )}
         <LambdaDemo />
+        </main>
       </div>
     );
   }
