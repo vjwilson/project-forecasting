@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import AppHeader from './components/AppHeader/AppHeader';
 
 class LambdaDemo extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class LambdaDemo extends Component {
       .then(json => {
         const list = json.msg.map(person => (
           <li
-            class="consultant-list-item"
+            className="consultant-list-item"
             key={person.email}
           >
             <span>{person.firstName} {person.lastName}</span>
@@ -37,13 +38,13 @@ class LambdaDemo extends Component {
     const { loading, list } = this.state;
 
     return (
-      <p>
+      <div>
         <button onClick={this.listConsultants('consultants')}>
           {loading ? 'Loading...' : 'Get Consultants'}
         </button>
         <br />
-        <ul class="consultant-list">{list}</ul>
-      </p>
+        <ul className="consultant-list">{list}</ul>
+      </div>
     );
   }
 }
@@ -52,13 +53,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <LambdaDemo />
-        </header>
+        <AppHeader />
+        <LambdaDemo />
       </div>
     );
   }
