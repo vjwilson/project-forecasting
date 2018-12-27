@@ -1,70 +1,28 @@
 import React, { Component } from 'react';
 import styles from './App.module.css';
-import { Router, Link, navigate } from "@reach/router";
+import { Router, navigate } from "@reach/router";
 
 import AppHeader from './components/AppHeader/AppHeader';
 import SplashPage from './components/SplashPage/SplashPage';
 import Dashboard from './components/Dashboard/Dashboard';
-
-class LambdaDemo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      list: null,
-      loading: false,
-      page: 'splash',
-    };
-  }
-
-  listConsultants = api => e => {
-    e.preventDefault();
-
-    this.setState({ loading: true });
-    fetch('/.netlify/functions/' + api)
-      .then(response => response.json())
-      .then(json => {
-        const list = json.msg.map(person => (
-          <li
-            className={styles['consultant-list-item']}
-            key={person.email}
-          >
-            <span>{person.firstName} {person.lastName}</span>
-            <span>
-              {person.title}
-              {person.specialty && <span>, {person.specialty}</span>}
-            </span>
-          </li>
-        ));
-
-        this.setState({ loading: false, list })
-      });
-
-  }
-
-  render() {
-    const { loading, list } = this.state;
-
-    return (
-      <div>
-        <button onClick={this.listConsultants('consultants')}>
-          {loading ? 'Loading...' : 'Get Consultants'}
-        </button>
-        <br />
-        <ul className={styles['consultant-list']}>{list}</ul>
-      </div>
-    );
-  }
-}
+import ConsultantDetail from './components/ConsultantDetail/ConsultantDetail';
 
 class App extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
+      consultants: [],
       page: 'splash',
       role: '',
     };
 
     this.loginAs = this.loginAs.bind(this);
+    this.apiGetConsultants = this.apiGetConsultants.bind(this);
+  }
+
+  componentDidMount() {
+    this.apiGetConsultants();
   }
 
   loginAs(role) {
@@ -80,8 +38,19 @@ class App extends Component {
     navigate(page);
   }
 
+  apiGetConsultants() {
+    fetch('/.netlify/functions/consultants')
+      .then(response => response.json())
+      .then(json => {
+        this.setState({ consultants: json.msg })
+      });
+  }
+
   render() {
-    const { page, role } = this.state;
+    const {
+      consultants,
+      role,
+    } = this.state;
 
     return (
       <div className={styles['app']}>
@@ -95,11 +64,15 @@ class App extends Component {
               path="/"
             />
             <Dashboard
+              consultants={consultants}
               path="/dashboard"
               role={role}
             />
+            <ConsultantDetail
+              consultants={consultants}
+              path="consultants/:consultantSlug"
+            />
           </Router>
-          <LambdaDemo />
         </main>
       </div>
     );

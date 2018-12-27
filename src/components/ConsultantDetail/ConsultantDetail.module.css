@@ -1,0 +1,33 @@
+.consultant-detail {
+  background-color:  white;
+  border: 1px solid black;
+  border-radius: 6px;
+  box-shadow: 1px 1px 1px 1px #e1e1e1;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+}
+
+.consultant-main {
+  display: flex;
+  padding: 12px 0;
+}
+
+.consultant-info {
+  display: flex;
+  flex: 1 0 30%;
+  flex-direction: column;
+}
+
+.consultant-name {
+  font-weight:  bold;
+}
+
+.consultant-schedule {
+  flex: 2 0 auto;
+}
+
+.consultant-schedule th,
+.consultant-schedule td {
+  padding: 6px;
+}
