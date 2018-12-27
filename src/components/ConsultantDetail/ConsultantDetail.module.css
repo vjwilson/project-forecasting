@@ -8,6 +8,10 @@
   padding: 6px;
 }
 
+.consultant-detail h1 {
+  margin-bottom: 6px;
+}
+
 .consultant-main {
   display: flex;
   padding: 12px 0;
@@ -15,8 +19,9 @@
 
 .consultant-info {
   display: flex;
-  flex: 1 0 30%;
+  flex: 1 0 20%;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .consultant-name {
@@ -25,6 +30,14 @@
 
 .consultant-schedule {
   flex: 2 0 auto;
+}
+
+.skills {
+  margin-bottom: 24px;
+}
+
+.skills h2 {
+  margin-bottom: 3px;
 }
 
 .consultant-schedule th,

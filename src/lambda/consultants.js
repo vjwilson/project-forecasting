@@ -172,8 +172,10 @@ function getConsultants() {
       "slug": "leilani-boyce",
       "email": "@insight.com",
       "talents": [
-        "SharePoint",
-        "JavaScript"
+        "Journey Mapping",
+        "User Interviews",
+        "User Testing",
+        "Analytics"
       ],
       "lastName": "Boyce",
       "firstName": "Leilani",
