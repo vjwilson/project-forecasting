@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './App.module.css';
+import { Router, Link, navigate } from "@reach/router";
 
 import AppHeader from './components/AppHeader/AppHeader';
 import SplashPage from './components/SplashPage/SplashPage';
@@ -60,7 +61,7 @@ class App extends Component {
     super(props);
     this.state = {
       page: 'splash',
-      user: '',
+      role: '',
     };
 
     this.loginAs = this.loginAs.bind(this);
@@ -68,13 +69,15 @@ class App extends Component {
 
   loginAs(role) {
     const page = (role)
-      ? 'dashboard'
-      : 'splash';
+      ? '/dashboard'
+      : '/';
 
     this.setState({
       page,
       role,
     });
+
+    navigate(page);
   }
 
   render() {
@@ -87,15 +90,16 @@ class App extends Component {
           role={role}
         />
         <main className={styles['app-main']}>
-          { page === 'splash' && (
-            <SplashPage />
-          )}
-          { page !== 'splash' && (
+          <Router>
+            <SplashPage
+              path="/"
+            />
             <Dashboard
+              path="/dashboard"
               role={role}
             />
-          )}
-        <LambdaDemo />
+          </Router>
+          <LambdaDemo />
         </main>
       </div>
     );
