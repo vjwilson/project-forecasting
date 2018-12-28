@@ -16,11 +16,19 @@ function getHours() {
         {
           "project": "Duke Sharepoint",
           "hours": 2
+        },
+        {
+          "project": "BOFA Sitecore",
+          "hours": 2
         }
       ],
       "2018-12-26": [
         {
           "project": "Duke Sharepoint",
+          "hours": 2
+        },
+        {
+          "project": "BOFA Sitecore",
           "hours": 2
         }
       ],
@@ -28,11 +36,59 @@ function getHours() {
         {
           "project": "Duke Sharepoint",
           "hours": 2
+        },
+        {
+          "project": "BOFA Sitecore",
+          "hours": 2
         }
       ],
       "2018-12-28": [
         {
           "project": "Duke Sharepoint",
+          "hours": 2
+        },
+        {
+          "project": "BOFA Sitecore",
+          "hours": 2
+        }
+      ],
+      "2018-12-31": [
+        {
+          "project": "Duke Sharepoint",
+          "hours": 2
+        },
+        {
+          "project": "BOFA Sitecore",
+          "hours": 2
+        }
+      ],
+      "2019-01-02": [
+        {
+          "project": "Duke Sharepoint",
+          "hours": 2
+        },
+        {
+          "project": "BOFA Sitecore",
+          "hours": 2
+        }
+      ],
+      "2019-01-03": [
+        {
+          "project": "Duke Sharepoint",
+          "hours": 2
+        },
+        {
+          "project": "BOFA Sitecore",
+          "hours": 2
+        }
+      ],
+      "2019-01-04": [
+        {
+          "project": "Duke Sharepoint",
+          "hours": 2
+        },
+        {
+          "project": "BOFA Sitecore",
           "hours": 2
         }
       ]
@@ -57,6 +113,30 @@ function getHours() {
         }
       ],
       "2018-12-28": [
+        {
+          "project": "Ally Investment Site",
+          "hours": 8
+        }
+      ],
+      "2018-12-31": [
+        {
+          "project": "Ally Investment Site",
+          "hours": 8
+        }
+      ],
+      "201-01-02": [
+        {
+          "project": "Ally Investment Site",
+          "hours": 8
+        }
+      ],
+      "201-01-03": [
+        {
+          "project": "Ally Investment Site",
+          "hours": 8
+        }
+      ],
+      "201-01-04": [
         {
           "project": "Ally Investment Site",
           "hours": 8
@@ -87,6 +167,30 @@ function getHours() {
           "project": "Duke Idealab",
           "hours": 8
         }
+      ],
+      "2018-12-31": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-02": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-03": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-04": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
       ]
     },
     "3f985e41-1499-4802-ba50-c5100b3189c0": {
@@ -109,6 +213,30 @@ function getHours() {
         }
       ],
       "2018-12-28": [
+        {
+          "project": "Canteen",
+          "hours": 8
+        }
+      ],
+      "2018-12-31": [
+        {
+          "project": "Canteen",
+          "hours": 8
+        }
+      ],
+      "2019-01-02": [
+        {
+          "project": "Canteen",
+          "hours": 8
+        }
+      ],
+      "2019-01-03": [
+        {
+          "project": "Canteen",
+          "hours": 8
+        }
+      ],
+      "2019-01-04": [
         {
           "project": "Canteen",
           "hours": 8
@@ -139,6 +267,30 @@ function getHours() {
           "project": "Ally Microsite",
           "hours": 8
         }
+      ],
+      "2018-12-31": [
+        {
+          "project": "Ally Microsite",
+          "hours": 8
+        }
+      ],
+      "2019-01-02": [
+        {
+          "project": "Ally Microsite",
+          "hours": 8
+        }
+      ],
+      "2019-01-03": [
+        {
+          "project": "Ally Microsite",
+          "hours": 8
+        }
+      ],
+      "2019-01-04": [
+        {
+          "project": "Ally Microsite",
+          "hours": 8
+        }
       ]
     },
     "14698158-c56c-435a-a535-f07456c599c2": {
@@ -161,6 +313,30 @@ function getHours() {
         }
       ],
       "2018-12-28": [
+        {
+          "project": "WIMS Internal Site",
+          "hours": 8
+        }
+      ],
+      "2018-12-31": [
+        {
+          "project": "WIMS Internal Site",
+          "hours": 8
+        }
+      ],
+      "2019-01-02": [
+        {
+          "project": "WIMS Internal Site",
+          "hours": 8
+        }
+      ],
+      "2019-01-03": [
+        {
+          "project": "WIMS Internal Site",
+          "hours": 8
+        }
+      ],
+      "2019-01-04": [
         {
           "project": "WIMS Internal Site",
           "hours": 8
@@ -191,6 +367,30 @@ function getHours() {
           "project": "NC DOT Employee Site",
           "hours": 8
         }
+      ],
+      "2018-12-31": [
+        {
+          "project": "NC DOT Employee Site",
+          "hours": 8
+        }
+      ],
+      "2019-01-02": [
+        {
+          "project": "NC DOT Employee Site",
+          "hours": 8
+        }
+      ],
+      "2019-01-03": [
+        {
+          "project": "NC DOT Employee Site",
+          "hours": 8
+        }
+      ],
+      "2019-01-04": [
+        {
+          "project": "NC DOT Employee Site",
+          "hours": 8
+        }
       ]
     },
     "ff2abcf2-a6fc-4d7e-908c-2cfd572ca1e5": {
@@ -213,6 +413,30 @@ function getHours() {
         }
       ],
       "2018-12-28": [
+        {
+          "project": "Family Dollar Tracker Mobile App",
+          "hours": 8
+        }
+      ],
+      "2018-12-31": [
+        {
+          "project": "Family Dollar Tracker Mobile App",
+          "hours": 8
+        }
+      ],
+      "2019-01-02": [
+        {
+          "project": "Family Dollar Tracker Mobile App",
+          "hours": 8
+        }
+      ],
+      "2019-01-03": [
+        {
+          "project": "Family Dollar Tracker Mobile App",
+          "hours": 8
+        }
+      ],
+      "2019-01-04": [
         {
           "project": "Family Dollar Tracker Mobile App",
           "hours": 8
@@ -243,6 +467,30 @@ function getHours() {
           "project": "Ally Microsite",
           "hours": 8
         }
+      ],
+      "2018-12-31": [
+        {
+          "project": "Ally Microsite",
+          "hours": 8
+        }
+      ],
+      "2019-01-02": [
+        {
+          "project": "Ally Microsite",
+          "hours": 8
+        }
+      ],
+      "2019-01-03": [
+        {
+          "project": "Ally Microsite",
+          "hours": 8
+        }
+      ],
+      "2019-01-04": [
+        {
+          "project": "Ally Microsite",
+          "hours": 8
+        }
       ]
     },
     "2b6a3edb-ecd7-4e84-acdd-7ae06b743fb0": {
@@ -265,6 +513,30 @@ function getHours() {
         }
       ],
       "2018-12-28": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2018-12-31": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-02": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-03": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-04": [
         {
           "project": "Duke Idealab",
           "hours": 8
@@ -293,6 +565,116 @@ function getHours() {
       "2018-12-28": [
         {
           "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2018-12-31": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-02": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-03": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-04": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ]
+    },
+    "693572fc-73f2-44ec-8200-fd3b7c61a00d": {
+      "2018-12-31": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-02": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-03": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-04": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-07": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-08": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-09": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-10": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-11": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-14": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-15": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-16": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-17": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-18": [
+        {
+          "project": "EPRI Member Center",
           "hours": 8
         }
       ]

@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
 import { Link } from "@reach/router";
 
-import { getHoursForWeek } from '../../lib/hours.js';
+import { getHoursForUpcomingWeeks, getHoursForWeek } from '../../lib/hours.js';
 
 import styles from './ConsultantTable.module.css';
 
 class ConsultantTable extends Component {
   constructor(props) {
     super(props);
+
+    const consultantsWithUpcomingWeekHours = props.consultants.map(consultant => {
+      const hourTotals = getHoursForUpcomingWeeks(consultant, props.currentMonday);
+      return {...consultant, hourTotals}
+    });
+
+    this.state = {
+      consultants: consultantsWithUpcomingWeekHours,
+    };
   }
 
   render() {
-    const { currentMonday } = this.props;
-
-    const rows = this.props.consultants.map(consultant => {
-      const hoursForWeek = getHoursForWeek(consultant, currentMonday);
+    const rows = this.state.consultants.map(consultant => {
 
       return (
         <tr
@@ -28,13 +34,13 @@ class ConsultantTable extends Component {
           </td>
           <td className={styles['left-cell']}>{consultant.title}</td>
           <td className={styles['left-cell']}>{consultant.specialty}</td>
-          <td className={styles['right-cell']}>{hoursForWeek}</td>
-          <td className={styles['right-cell']}>0</td>
-          <td className={styles['right-cell']}>0</td>
-          <td className={styles['right-cell']}>0</td>
-          <td className={styles['right-cell']}>0</td>
-          <td className={styles['right-cell']}>0</td>
-          <td className={styles['right-cell']}>0</td>
+          <td className={styles['right-cell']}>{consultant.hourTotals[0]}</td>
+          <td className={styles['right-cell']}>{consultant.hourTotals[1]}</td>
+          <td className={styles['right-cell']}>{consultant.hourTotals[2]}</td>
+          <td className={styles['right-cell']}>{consultant.hourTotals[3]}</td>
+          <td className={styles['right-cell']}>{consultant.hourTotals[4]}</td>
+          <td className={styles['right-cell']}>{consultant.hourTotals[5]}</td>
+          <td className={styles['right-cell']}>{consultant.hourTotals[6]}</td>
         </tr>
       );
     });

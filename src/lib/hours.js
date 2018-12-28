@@ -1,3 +1,11 @@
+export function getHoursForUpcomingWeeks(consultant, monday) {
+  const mondays = getUpcomingMondays(monday);
+
+  return mondays.map(day => {
+    return getHoursForWeek(consultant, day);
+  });
+}
+
 export function getHoursForWeek(consultant, monday) {
   const dateKeys = getDateStrings(getDatesForWeek(monday));
 
@@ -14,6 +22,18 @@ function getHoursInDate(targetDate) {
     const newHours = projectHours.hours || 0;
     return sum + newHours;
   }, 0);
+}
+
+function getUpcomingMondays(monday, weekCount = 7) {
+  const weekOfMilliseconds = 604800000;
+
+  const mondayList = [monday];
+  for (let i = 1; i < weekCount; i++) {
+    const nextMonday = new Date(monday.getTime() + (weekOfMilliseconds * i));
+    mondayList.push(nextMonday);
+  }
+
+  return mondayList;
 }
 
 function getDatesForWeek(monday) {
