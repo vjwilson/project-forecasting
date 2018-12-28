@@ -10,7 +10,7 @@ class AppHeader extends Component {
 
     return (
       <header className={styles['app-header']}>
-        <h1>Resouce Allocation</h1>
+        <h1>Resource Allocation</h1>
         <Login
           login={this.props.login}
           role={role}

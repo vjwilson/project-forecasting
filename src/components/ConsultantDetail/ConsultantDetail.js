@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { Link, navigate } from "@reach/router";
 
+import { getMonday } from '../../lib/datetime.js';
+
 import styles from './ConsultantDetail.module.css';
+
+import ConsultantTable from '../ConsultantTable/ConsultantTable';
 
 class ConsultantDetail extends Component {
   constructor(props) {
@@ -14,13 +18,16 @@ class ConsultantDetail extends Component {
       navigate('/');
     }
 
+    const monday = getMonday(new Date());
+
     this.state = {
       consultant,
+      monday,
     };
   }
 
   render() {
-    const { consultant } = this.state || {};
+    const { consultant, monday } = this.state || {};
 
     const skills = consultant.talents.map(skill => (
       <li key={skill}>{skill}</li>
@@ -37,42 +44,10 @@ class ConsultantDetail extends Component {
             <div>Utilization: 100%</div>
           </div>
           <div className={styles['consultant-schedule']}>
-            <table>
-              <thead>
-                <tr>
-                  <th>Client</th>
-                  <th>This Week</th>
-                  <th>Next Week</th>
-                  <th>7-Jan</th>
-                  <th>14-Jan</th>
-                  <th>21-Jan</th>
-                  <th>28-Jan</th>
-                  <th>4-Feb</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td>24 hours</td>
-                  <td>40 hours</td>
-                  <td>40 hours</td>
-                  <td>40 hours</td>
-                  <td>40 hours</td>
-                  <td>40 hours</td>
-                  <td>40 hours</td>
-                </tr>
-                <tr>
-                  <th>Canteen</th>
-                  <td>24 hours</td>
-                  <td>40 hours</td>
-                  <td>40 hours</td>
-                  <td>40 hours</td>
-                  <td>40 hours</td>
-                  <td>40 hours</td>
-                  <td>40 hours</td>
-                </tr>
-              </tbody>
-            </table>
+            <ConsultantTable
+              consultants={[consultant]}
+              currentMonday={monday}
+            />
           </div>
         </div>
         <section className={styles['skills']}>

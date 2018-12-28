@@ -191,6 +191,186 @@ function getHours() {
           "project": "Duke Idealab",
           "hours": 8
         }
+      ],
+      "2019-01-07": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-08": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-09": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-10": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-11": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-14": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-15": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-16": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-17": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-18": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-21": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-22": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-23": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        },
+      ],
+      "2019-01-24": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-25": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-28": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-29": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-30": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-31": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-01": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-04": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-05": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-06": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-07": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-08": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-11": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-12": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-13": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-14": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-15": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
       ]
     },
     "3f985e41-1499-4802-ba50-c5100b3189c0": {
@@ -591,6 +771,186 @@ function getHours() {
           "project": "Duke Idealab",
           "hours": 8
         }
+      ],
+      "2019-01-07": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-08": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-09": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-10": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-11": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-14": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-15": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-16": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-17": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-18": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-21": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-22": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-23": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        },
+      ],
+      "2019-01-24": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-25": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-28": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-29": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-30": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-01-31": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-01": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-04": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-05": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-06": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-07": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-08": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-11": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-12": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-13": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-14": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
+      ],
+      "2019-02-15": [
+        {
+          "project": "Duke Idealab",
+          "hours": 8
+        }
       ]
     },
     "693572fc-73f2-44ec-8200-fd3b7c61a00d": {
@@ -673,6 +1033,126 @@ function getHours() {
         }
       ],
       "2019-01-18": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-21": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-22": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-23": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        },
+      ],
+      "2019-01-24": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-25": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-28": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-29": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-30": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-01-31": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-02-01": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-02-04": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-02-05": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-02-06": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-02-07": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-02-08": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-02-11": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-02-12": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-02-13": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-02-14": [
+        {
+          "project": "EPRI Member Center",
+          "hours": 8
+        }
+      ],
+      "2019-02-15": [
         {
           "project": "EPRI Member Center",
           "hours": 8

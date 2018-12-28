@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from "@reach/router";
 
-import { getHoursForUpcomingWeeks, getHoursForWeek } from '../../lib/hours.js';
+import { getHoursForUpcomingWeeks } from '../../lib/hours';
+import { getUpcomingMondays, getShortWeekName } from '../../lib/datetime';
 
 import styles from './ConsultantTable.module.css';
 
@@ -13,33 +14,42 @@ class ConsultantTable extends Component {
       const hourTotals = getHoursForUpcomingWeeks(consultant, props.currentMonday);
       return {...consultant, hourTotals}
     });
+    const upcomingMondays = getUpcomingMondays(props.currentMonday)
+      .map(day => getShortWeekName(day));
 
     this.state = {
       consultants: consultantsWithUpcomingWeekHours,
+      upcomingMondays,
     };
   }
 
   render() {
-    const rows = this.state.consultants.map(consultant => {
+    const { showConsultants } = this.props;
+    const { consultants, upcomingMondays } = this.state;
+
+    const rows = consultants.map(consultant => {
 
       return (
         <tr
           className={styles['body-row']}
           key={consultant.guid}
         >
-          <td className={styles['left-cell']}>
-            <Link to={`/consultants/${consultant.slug}`}>
-              {`${consultant.firstName} ${consultant.lastName}`}
-            </Link>
-          </td>
-          <td className={styles['left-cell']}>{consultant.title}</td>
-          <td className={styles['left-cell']}>{consultant.specialty}</td>
+          {showConsultants && (
+            <td className={styles['left-cell']}>
+              <Link to={`/consultants/${consultant.slug}`}>
+                {`${consultant.firstName} ${consultant.lastName}`}
+              </Link>
+              <div>{consultant.title}</div>
+              <div>{consultant.specialty}</div>
+            </td>
+          )}
           <td className={styles['right-cell']}>{consultant.hourTotals[0]}</td>
           <td className={styles['right-cell']}>{consultant.hourTotals[1]}</td>
           <td className={styles['right-cell']}>{consultant.hourTotals[2]}</td>
           <td className={styles['right-cell']}>{consultant.hourTotals[3]}</td>
           <td className={styles['right-cell']}>{consultant.hourTotals[4]}</td>
           <td className={styles['right-cell']}>{consultant.hourTotals[5]}</td>
+          <td className={styles['right-cell']}>{consultant.hourTotals[6]}</td>
           <td className={styles['right-cell']}>{consultant.hourTotals[6]}</td>
         </tr>
       );
@@ -49,16 +59,15 @@ class ConsultantTable extends Component {
       <table className={styles['consultant-table']}>
         <thead>
           <tr>
-            <th className={styles['left-cell']}>Consultant</th>
-            <th className={styles['left-cell']}>Level</th>
-            <th className={styles['left-cell']}>Title</th>
+            {showConsultants && (<th className={styles['left-cell']}>Consultant</th>)}
             <th className={styles['right-cell']}>This Week</th>
             <th className={styles['right-cell']}>Next Week</th>
-            <th className={styles['right-cell']}>7-Jan</th>
-            <th className={styles['right-cell']}>14-Jan</th>
-            <th className={styles['right-cell']}>21-Jan</th>
-            <th className={styles['right-cell']}>28-Jan</th>
-            <th className={styles['right-cell']}>4-Feb</th>
+            <th className={styles['right-cell']}>{upcomingMondays[2]}</th>
+            <th className={styles['right-cell']}>{upcomingMondays[3]}</th>
+            <th className={styles['right-cell']}>{upcomingMondays[4]}</th>
+            <th className={styles['right-cell']}>{upcomingMondays[5]}</th>
+            <th className={styles['right-cell']}>{upcomingMondays[6]}</th>
+            <th className={styles['right-cell']}>{upcomingMondays[7]}</th>
           </tr>
         </thead>
         <tbody>

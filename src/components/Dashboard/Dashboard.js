@@ -39,6 +39,7 @@ class Dashboard extends Component {
           <ConsultantTable
             consultants={consultants}
             currentMonday={monday}
+            showConsultants
           />
             <div className={styles['actions']}>
               <Link to="/consultants/new">+ Add New Teammate</Link>
