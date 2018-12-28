@@ -18,11 +18,11 @@ class App extends Component {
     };
 
     this.loginAs = this.loginAs.bind(this);
-    this.apiGetConsultants = this.apiGetConsultants.bind(this);
+    this.apiGetConsultantHours = this.apiGetConsultantHours.bind(this);
   }
 
   componentDidMount() {
-    this.apiGetConsultants();
+    this.apiGetConsultantHours();
   }
 
   loginAs(role) {
@@ -38,12 +38,29 @@ class App extends Component {
     navigate(page);
   }
 
-  apiGetConsultants() {
-    fetch('/.netlify/functions/consultants')
-      .then(response => response.json())
-      .then(json => {
-        this.setState({ consultants: json.msg })
+  apiGetConsultantHours() {
+    const urls = [
+      '/.netlify/functions/consultants',
+      '/.netlify/functions/hours',
+    ];
+
+    Promise.all(urls.map(url =>
+      fetch(url)
+        .then(resp => resp.json())
+    )).then(jsons => {
+      const consultants = jsons[0].msg;
+      const hours = jsons[1].msg;
+      const consultantsWithHours = consultants.map(grunt => {
+        const gruntHours = hours[grunt.guid] || {};
+
+        return {...grunt, hours: gruntHours };
       });
+
+      console.log('consultantsWithHours', consultantsWithHours)
+      this.setState({
+        consultants: consultantsWithHours,
+      });
+    });
   }
 
   render() {

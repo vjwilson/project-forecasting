@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from "@reach/router";
 
+import { getHoursForWeek } from '../../lib/hours.js';
+
 import styles from './ConsultantTable.module.css';
 
 class ConsultantTable extends Component {
@@ -9,7 +11,11 @@ class ConsultantTable extends Component {
   }
 
   render() {
+    const { currentMonday } = this.props;
+
     const rows = this.props.consultants.map(consultant => {
+      const hoursForWeek = getHoursForWeek(consultant, currentMonday);
+
       return (
         <tr
           className={styles['body-row']}
@@ -22,16 +28,17 @@ class ConsultantTable extends Component {
           </td>
           <td className={styles['left-cell']}>{consultant.title}</td>
           <td className={styles['left-cell']}>{consultant.specialty}</td>
-          <td className={styles['right-cell']}>40</td>
-          <td className={styles['right-cell']}>40</td>
-          <td className={styles['right-cell']}>40</td>
-          <td className={styles['right-cell']}>40</td>
-          <td className={styles['right-cell']}>40</td>
-          <td className={styles['right-cell']}>40</td>
-          <td className={styles['right-cell']}>40</td>
+          <td className={styles['right-cell']}>{hoursForWeek}</td>
+          <td className={styles['right-cell']}>0</td>
+          <td className={styles['right-cell']}>0</td>
+          <td className={styles['right-cell']}>0</td>
+          <td className={styles['right-cell']}>0</td>
+          <td className={styles['right-cell']}>0</td>
+          <td className={styles['right-cell']}>0</td>
         </tr>
       );
-    })
+    });
+
     return (
       <table className={styles['consultant-table']}>
         <thead>
