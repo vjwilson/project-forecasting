@@ -1,5 +1,40 @@
 import { getUpcomingMondays } from './datetime';
 
+export function getProjectNames(hours) {
+    const dateKeys = Object.keys(hours);
+    const projects = dateKeys.reduce((foundProjects, date) => {
+      const projectArr = hours[date];
+      let newFoundProjects = {...foundProjects}
+      projectArr.forEach(project => {
+        newFoundProjects[project.project] = true;
+      })
+      return newFoundProjects;
+    }, {});
+
+    return Object.keys(projects)
+}
+
+export function getClientHoursForUpcomingWeeks(consultant, monday) {
+  const mondays = getUpcomingMondays(monday);
+
+  return mondays.map(day => {
+    return { [day]: getClientHoursForWeek(consultant, day) };
+  });
+}
+
+function getClientHoursForWeek(consultant, monday) {
+  const dateKeys = getDateStrings(getDatesForWeek(monday));
+
+  const clientHours = dateKeys.reduce((totalHours, weekday) => {
+    const targetDate = consultant.hours[weekday] || [];
+    return targetDate.reduce((totals, nextClient) => {
+      return { ...totals, [nextClient.project]: (totals[nextClient.project] || 0) + nextClient.hours, grandTotal: totals.grandTotal + nextClient.hours };
+    }, totalHours);
+  }, { grandTotal: 0 });
+
+  return clientHours;
+}
+
 export function getHoursForUpcomingWeeks(consultant, monday) {
   const mondays = getUpcomingMondays(monday);
 

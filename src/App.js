@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import styles from './App.module.css';
 import { Router, navigate } from "@reach/router";
 
+import { getMonday } from './lib/datetime.js';
+import { getClientHoursForUpcomingWeeks, getHoursForUpcomingWeeks } from './lib/hours';
+
 import AppHeader from './components/AppHeader/AppHeader';
 import SplashPage from './components/SplashPage/SplashPage';
 import Dashboard from './components/Dashboard/Dashboard';
@@ -11,8 +14,11 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    const currentMonday = getMonday(new Date());
+
     this.state = {
       consultants: [],
+      currentMonday,
       page: 'splash',
       role: '',
     };
@@ -50,13 +56,16 @@ class App extends Component {
     )).then(jsons => {
       const consultants = jsons[0].msg;
       const hours = jsons[1].msg;
-      const consultantsWithHours = consultants.map(grunt => {
-        const gruntHours = hours[grunt.guid] || {};
+      const consultantsWithHours = consultants.map(consultant => {
+        const consultantHours = hours[consultant.guid] || {};
 
-        return {...grunt, hours: gruntHours };
+        const clientTotals = getClientHoursForUpcomingWeeks(
+          {...consultant, hours: consultantHours},
+          this.state.currentMonday
+        );
+        return {...consultant, hours: consultantHours, clientTotals };
       });
 
-      console.log('consultantsWithHours', consultantsWithHours)
       this.setState({
         consultants: consultantsWithHours,
       });

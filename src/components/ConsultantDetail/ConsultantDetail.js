@@ -47,6 +47,7 @@ class ConsultantDetail extends Component {
             <ConsultantTable
               consultants={[consultant]}
               currentMonday={monday}
+              showClients
             />
           </div>
         </div>
